@@ -1,0 +1,182 @@
+{%load static%}
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<html>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static '/css/knowledgegraph.css'%}"
+  />  
+      <div class="header">
+        <div class="button-tag">
+          <a href="/" class="anchor"> home </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://www.commonhealth.com.tw/" class="anchor"> 康健 </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://coolhealth.com.tw/" class="anchor"> 潮健康 </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://health.ettoday.net/" class="anchor"> ETtoday健康雲 </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://www.edh.tw/" class="anchor"> 早安健康 </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://heho.com.tw/" class="anchor"> Heho </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://www.healthnews.com.tw/" class="anchor"> 健康醫療網 </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://health.ltn.com.tw/" class="anchor"> 自由健康網 </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://healthmedia.com.tw/" class="anchor"> Now健康 </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://www.storm.mg/life-category/s24252/5" class="anchor">
+            風健康
+          </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://www.tvbs.com.tw/" class="anchor"> TVBS </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://health.udn.com/health/index" class="anchor"> 元氣網 </a>
+        </div>
+        <div class="button-tag">
+          <a href="https://health99.hpa.gov.tw/" class="anchor"> 健康99 </a>
+        </div>
+      </div>
+      <div class="outer">
+        <div class="graph-title">It is our graph</div>
+        <div class="graph">
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+      </div>
+    </html>
+
+   
+    {% comment %} <style>
+      .header {
+        width: 100px;
+        background-color: white;
+        color: white;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        top: 0px;
+        border-width: 3px;
+        border-style: solid;
+        border-color: rgb(192, 189, 189);
+      }
+      .button-tag {
+        display: flex;
+        font-size: 10px;
+        font-family: Arial;
+        width: 70px;
+        height: 40px;
+        background-color: lightgray;
+        border-width: 2px;
+        border-style: solid;
+        border-color: gray;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-left: 13px;
+        margin-top: 4px;
+      }
+      .anchor {
+        text-decoration: none;
+        color: black;
+      }
+      .anchor:hover {
+        color: pink;
+      }
+      .outer {
+        font-family: Arial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 90px;
+      }
+      .graph-title {
+        font-size: 40px;
+      }
+      .graph {
+        margin-top: 30px;
+        width: 600px;
+        display: flex;
+      }
+    </style> {% endcomment %}
+
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: {{name|safe}},
+          datasets: [
+            {
+              label: "# of Votes",
+              data: {{number_of_content|safe}},
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+                "rgba(255, 255, 0, 0.2)",
+                "rgba(255, 193, 193, 0.2)",
+                "rgba(148, 0, 211, 0.2)",
+                "rgba(139, 119, 101, 0.2)",
+                "rgba(139, 0, 0, 0.2)",
+                "rgba(238, 18, 137, 0.2)",
+                "rgba(205, 16, 118, 0.2)",
+                "rgba(0, 0, 139, 0.2)",
+              ],
+              borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+              "rgba(255, 255, 0, 1)",
+              "rgba(255, 193, 193, 1)",
+              "rgba(148, 0, 211, 1)",
+              "rgba(139, 119, 101, 1)",
+              "rgba(139, 0, 0, 1)",
+              "rgba(238, 18, 137, 1)",
+              "rgba(205, 16, 118, 1)",
+              "rgba(0, 0, 139, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 15
+                    }
+                }
+            }
+        }
+        },
+
+      });
+  </script>
+</html>
