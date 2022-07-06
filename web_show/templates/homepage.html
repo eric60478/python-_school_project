@@ -1,0 +1,201 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href={% static 'css/homepage.css' %} rel="stylesheet" />
+    <title>知識圖譜</title>
+    <div class="top-section">
+      <div class="titlename">Welcome to 知識圖譜</div>
+      <div class="titlename">link_kiebenna</div>
+    </div>
+  </head>
+
+  <div class="header">
+    <div class="button-tag">
+      <a href="/" style="text-decoration: none; color: black"> home </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://www.commonhealth.com.tw/"
+        style="text-decoration: none; color: black"
+      >
+        康健
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://coolhealth.com.tw/"
+        style="text-decoration: none; color: black"
+      >
+        潮健康
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://health.ettoday.net/"
+        style="text-decoration: none; color: black"
+      >
+        ETtoday健康雲
+      </a>
+    </div>
+    <div class="button-tag">
+      <a href="https://www.edh.tw/" style="text-decoration: none; color: black">
+        早安健康
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://heho.com.tw/"
+        style="text-decoration: none; color: black"
+      >
+        Heho
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://www.healthnews.com.tw/"
+        style="text-decoration: none; color: black"
+      >
+        健康醫療網
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://health.ltn.com.tw/"
+        style="text-decoration: none; color: black"
+      >
+        自由健康網
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://healthmedia.com.tw/"
+        style="text-decoration: none; color: black"
+      >
+        Now健康
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://www.storm.mg/life-category/s24252/5"
+        style="text-decoration: none; color: black"
+      >
+        風健康
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://www.tvbs.com.tw/"
+        style="text-decoration: none; color: black"
+      >
+        TVBS
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://health.udn.com/health/index"
+        style="text-decoration: none; color: black"
+      >
+        元氣網
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="https://health99.hpa.gov.tw/"
+        style="text-decoration: none; color: black"
+      >
+        健康99
+      </a>
+    </div>
+    <div class="button-tag">
+      <a
+        href="http://127.0.0.1:8000/knowledgegraph"
+        style="text-decoration: none; color: black"
+      >
+        知識圖譜
+      </a>
+    </div>
+  </div>
+  <div class="introduce">
+    <div class="info">康健</div>
+    <div class="info">潮健康</div>
+    <div class="info">ETtoday健康雲</div>
+    <div class="info">早安健康</div>
+    <div class="info">Heho</div>
+    <div class="info">健康醫療網</div>
+    <div class="info">自由健康網</div>
+    <div class="info">Now健康</div>
+    <div class="info">風健康</div>
+    <div class="info">TVBS</div>
+    <div class="info">元氣網</div>
+    <div class="info">健康99</div>
+  </div>
+</html>
+
+{% comment %}
+<style>
+  .top-section {
+    display: flex;
+    background-color: white;
+    height: 100px;
+    align-items: center;
+    font-family: Arial;
+    margin-left: 100px;
+    margin-top: 0px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(192, 189, 189);
+  }
+
+  .titlename {
+    font-size: 30px;
+    margin-left: 40px;
+  }
+
+  .header {
+    width: 100px;
+    background-color: white;
+    color: white;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(192, 189, 189);
+  }
+
+  .button-tag {
+    display: flex;
+    font-size: 10px;
+    font-family: Arial;
+    width: 70px;
+    height: 37px;
+    background-color: lightgray;
+    border-width: 2px;
+    border-style: solid;
+    border-color: gray;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 13px;
+    margin-top: 4px;
+  }
+
+  .button-tag :hover {
+    background-color: lightblue;
+  }
+  .introduce {
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+  .info {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+</style>
+{% endcomment %}
