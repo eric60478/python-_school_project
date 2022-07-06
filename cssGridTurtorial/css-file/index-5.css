@@ -1,0 +1,53 @@
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html,
+body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+.container {
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+  /* 簡單來說即是在前面放茅點 */
+  grid-template-rows: [main-start]40px [content-start]auto [main-end content-end]40px;
+  height: 400px;
+}
+/* 可以先切很多grid 去處理 */
+/* 記得格子不可以重疊可以自己安排 */
+.header {
+  grid-column: main-start/main-end;
+}
+
+.menu {
+}
+
+.content {
+  grid-column: content-start/content-end;
+}
+
+.footer {
+  grid-column: main-start/main-end;
+}

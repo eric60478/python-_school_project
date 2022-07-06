@@ -1,0 +1,38 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  background-color: white;
+}
+
+.sidebar-link {
+  background-color: white;
+  height: 74px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 200;
+  padding-top: 5px;
+  cursor: pointer;
+}
+/* we can use justify-content: center;
+  align-items: center; to make item in center align vertically  justify horizontially*/
+/* class name selector  .*/
+/* 史所flex 平行排列flex-direction: row; */
+.sidebar-link:hover {
+  background-color: lightgray;
+}
+
+.sidebar-link img {
+  height: 24px;
+  margin-bottom: 4px;
+}
+/* it means target all img inside all sidebar link only*/
+
+.sidebar-link div {
+  font-family: Roboto Arial;
+  font-size: 12px;
+}

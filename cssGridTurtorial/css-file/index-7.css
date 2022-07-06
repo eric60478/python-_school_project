@@ -1,0 +1,45 @@
+.container {
+  border: 1px solid black;
+  height: 100%;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  justify-content: space-between;
+  align-content: space-between;
+}
+/* justify-content 為裡面一層的內容物justify-items 為內部div的情況*/
+/* justify-items: center;
+  align-items: center;格子固定內容處理會看進去each rows所以內容會被壓縮通常在最底層定義，外面的格子不便但裡面的內容變 */
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  background-color: #ffeead;
+  height: 100%;
+  padding: 10px;
+  margin: 0px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}

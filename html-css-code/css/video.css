@@ -1,0 +1,96 @@
+.thumbnail {
+  width: 100%;
+  /* 100% width means fill size with limited width*/
+  /*display: block; no need because have design outside grid to limit it*/
+  /* to make search occupy entire line  */
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.channel-picture {
+  /* we should determine the truly width respect to big div width就是設定一個侷限住的分割*/
+  background-color: white;
+}
+
+.video-info {
+  background-color: white;
+}
+
+.profile-picture {
+  width: 40px;
+  /* you can use 100% to fill 50px width */
+  border-radius: 40px;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 6px;
+}
+
+.video-grid {
+  font-family: Roboto, Arial;
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 40px;
+}
+/* 外圈包圍的就是下方視為默認 */
+@media (max-width: 1000px) {
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1499px) {
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1500px) {
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/* 在特殊條件下觸發media自動調整大小 */
+
+/* 基本上用grid 做切分即可 */
+.video-time {
+  font-size: 12px;
+  font-weight: 500;
+  background-color: black;
+  padding: 4px;
+  margin: 4px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 2px;
+}
+/* 如果沒有特別設定width的話會以設定的margin或border向外擴張 */
+/* 可以直接用padding margin 也是去設定4個角落 如果沒有填滿會自動處理 */

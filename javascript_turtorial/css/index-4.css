@@ -1,0 +1,28 @@
+/* .body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial;
+  font-size: 20px;
+} */
+/* 用在所有的前面不用加.很重要 */
+/* .body button {
+  border-radius: 5px;
+  background-color: white;
+  font-size: 20px;
+  padding: 20px;
+} */
+/* 用此種方式去處理可以宣告在class class */
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial;
+  font-size: 20px;
+}
+button {
+  border-radius: 5px;
+  background-color: white;
+  font-size: 20px;
+  padding: 20px;
+}

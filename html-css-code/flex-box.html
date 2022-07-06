@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flex box Practice</title>
+</head>
+
+<body style="padding-bottom: 1000px;">
+  <div style="
+  display:flex;
+  flex-direction:row; 
+  ;">
+    <!--can extend text-->
+    <div style="background-color: lightblue;">div111111</div>
+    <div style="background-color: lightpink;">div2<p> text </p>
+    </div>
+  </div>
+
+
+  <div style="
+  margin-top:30px;
+  display:flex;
+  flex-direction:row;   
+  ;">
+    <!--can extend text-->
+    <div style="
+      background-color: lightblue;
+      width:100px;
+    ">100px</div>
+    <div style="
+      background-color: lightpink;
+      flex:1;
+    ">flex1
+      <!-- flex 1 like 1 fr-->
+    </div>
+  </div>
+  </div>
+
+
+  <div style="
+  margin-top:30px;
+  display:flex;
+  flex-direction:row; 
+  ;">
+    <!--can extend text-->
+    <!--簡單來說flex 即是下層div去做處理-->
+    <div style="
+      background-color: lightblue;
+      width:100px;
+    ">100px</div>
+    <div style="
+      background-color: lightpink;
+      flex:1;
+    ">flex1
+      <!-- flex 1 like 1 fr-->
+    </div>
+    <div style="
+      background-color: lightblue;
+      flex:2;
+    ">flex2
+      <!-- flex 2 like 2 fr-->
+    </div>
+  </div>
+
+
+
+  <div style="
+  margin-top:30px;
+  height: 70px;
+  border: width 1px;
+  border-style:solid;
+  border-color: gray;
+  display:flex;
+  flex-direction:row; 
+  justify-content:center;
+  ;">
+    <!--可以從顯示看出flex佔據了一行-->
+    <!--can extend text-->
+    <!--簡單來說flex 即是下層div去做處理-->
+    <div style="
+      background-color: lightblue;
+      width:100px;
+    ">100px</div>
+    <div style="
+      background-color: lightpink;
+      width:100px;
+    ">100px
+      <!-- flex 1 like 1 fr-->
+    </div>
+    <div style="
+      background-color: lightblue;
+      width:100px;
+    ">100px
+      <!-- flex 2 like 2 fr-->
+    </div>
+  </div>
+
+
+
+  <div style="
+  margin-top:30px;
+  height: 70px;
+  border: width 1px;
+  border-style:solid;
+  border-color: gray;
+  display:flex;
+  flex-direction:row; 
+  justify-content:space-between;
+  ;">
+    <!--可以從顯示看出flex佔據了一行-->
+    <!--can extend text-->
+    <!--簡單來說flex 即是下層div去做處理-->
+    <div style="
+      background-color: lightblue;
+      width:100px;
+    ">100px</div>
+    <div style="
+      background-color: lightpink;
+      width:100px;
+    ">100px
+      <!-- flex 1 like 1 fr-->
+    </div>
+    <div style="
+      background-color: lightblue;
+      width:100px;
+    ">100px
+      <!-- flex 2 like 2 fr-->
+    </div>
+  </div>
+
+
+
+  <div style="
+  margin-top:30px;
+  height: 70px;
+  border: width 1px;
+  border-style:solid;
+  border-color: gray;
+  display:flex;
+  flex-direction:row; 
+  justify-content:space-between;
+  align-items:center;
+  ;">
+    <!--可以從顯示看出flex佔據了一行-->
+    <!--can extend text-->
+    <!--簡單來說flex 即是下層div去做處理-->
+    <!--align item can align top or end-->
+    <div style="
+      background-color: lightblue;
+      width:100px;
+    ">100px</div>
+    <div style="
+      background-color: lightpink;
+      width:100px;
+    ">100px
+      <!-- flex 1 like 1 fr-->
+    </div>
+    <div style="
+      background-color: lightblue;
+      width:100px;
+    ">100px
+      <!-- flex 2 like 2 fr-->
+    </div>
+  </div>
+</body>
+
+</html>

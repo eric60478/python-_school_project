@@ -1,0 +1,56 @@
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html,
+body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+.container {
+  display: grid;
+  grid-gap: 3px;
+  grid-template-rows: 40px auto 40px;
+  grid-template-areas:
+    ". h h h h h h h h h h h ."
+    "m c c c c c c c c c c c c"
+    ". f f f f f f f f f f f .";
+  height: 500px;
+}
+/* 圖示化分割格線沒特別定義的話會自動均分 */
+.header {
+  grid-area: h;
+  /* 就是看我們總共有幾個column 去處理 */
+}
+
+.menu {
+  grid-area: m;
+}
+
+.content {
+  grid-area: c;
+}
+
+.footer {
+  grid-area: f;
+}

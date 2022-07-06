@@ -1,0 +1,158 @@
+.header {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(192, 189, 189);
+}
+
+.left-section {
+  align-items: center;
+  display: flex; /* 要把flex box 放在flex box 裡下面item才會有align 效果 */
+}
+.hamburger-menu {
+  height: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.youtube-logo {
+  height: 20px;
+}
+.middle-section {
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1;
+  height: 34px;
+  width: 0;
+  border-color: white;
+  border-radius: 4px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid white;
+}
+/* border 可以一起設置 width=0 shrink */
+.search-bar::placeholder {
+  font-family: Roboto, Arial;
+  font-size: 16px;
+  padding-left: 10px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 2px;
+}
+.upload-icon-container,
+.voice-search-button,
+.search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 66px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  margin-left: -1px;
+  margin-right: 8px;
+
+  position: relative;
+}
+.upload-icon-container .tooltip,
+.voice-search-button .tooltip,
+.search-button .tooltip {
+  font-family: Roboto, Arial;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+/* opacity 不透明度 */
+/* only target tooltip in search-button */
+/* pointer-events 把指標的區塊看成不算 */
+.upload-icon-container:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.search-button:hover .tooltip {
+  opacity: 1;
+}
+
+.search-icon {
+  height: 25px;
+}
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px; /* 可以看到border 很像是邊界的意思框起根內部的空間。 */
+  border: none;
+}
+.voice-search-icon {
+  height: 20px;
+  background-color: rgb(243, 234, 234);
+}
+
+.right-section {
+  width: 180px;
+  margin-right: 24px;
+  display: flex;
+  /* flex box 可以防止物件變形 */
+  align-items: center;
+  /* align  裡面的物件朝什麼地方對齊*/
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+/* flex-shrink=0 dont shrink */
+.upload-icon {
+  height: 24px;
+}
+.youtube-app-icon {
+  height: 24px;
+}
+
+.notifications-icon-container {
+  position: relative;
+}
+.notifications-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: rgb(116, 0, 0);
+  color: white;
+  font-family: Roboto Arial;
+  font-size: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+}
+
+.notifications-icon {
+  height: 24px;
+}
+.current-user-picture {
+  height: 32px;
+  border-radius: 16px;
+}
